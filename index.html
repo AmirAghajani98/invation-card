@@ -1,19 +1,23 @@
 <!doctype html>
-<html lang="fa" dir="rtl">
+<html lang="fa" dir="rtl" class="h-full">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>جشن عقد</title>
+    <title>کارت دعوت</title>
+
     <script src="https://cdn.tailwindcss.com"></script>
+
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Gulzar&family=Noto+Nastaliq+Urdu:wght@400;500;600;700&family=Scheherazade+New:wght@400;700&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400&family=Great+Vibes&family=Tangerine:wght@400;700&display=swap"
       rel="stylesheet"
     />
+
     <style>
       body {
-        font-family: "Scheherazade New", serif;
+        box-sizing: border-box;
+        background-color: #faf8f5;
       }
       .font-poetry {
         font-family: "Gulzar", serif;
@@ -22,136 +26,158 @@
         font-family: "Noto Nastaliq Urdu", serif;
         font-weight: 500;
       }
+      .serif-font {
+        font-family: "Cormorant Garamond", serif;
+      }
+
+      .script-font {
+        font-family: "Great Vibes", cursive;
+      }
+
+      .script-alt {
+        font-family: "Tangerine", cursive;
+      }
+
       .gold-text {
-        background: linear-gradient(135deg, #305d00, #ffca58, #406e00);
+        background: linear-gradient(
+          135deg,
+          #d4af37 0%,
+          #f4e4ba 25%,
+          #d4af37 50%,
+          #b8962e 75%,
+          #d4af37 100%
+        );
         -webkit-background-clip: text;
         -webkit-text-fill-color: transparent;
         background-clip: text;
+        filter: drop-shadow(0 1px 1px rgba(180, 140, 50, 0.25));
       }
-      .invite-card {
-        position: relative;
-      }
-      .invite-card::before {
-        content: "";
-        position: absolute;
-        inset: 0;
-        background: url("file5.jpg") center / cover no-repeat;
-        z-index: 0;
-        padding: 0;
-      }
-      .invite-card::after {
-        content: "";
-        position: absolute;
-        inset: 0;
-        background: radial-gradient(
-          circle at center,
-          rgba(255, 255, 255, 0.92) 0%,
-          rgba(255, 255, 255, 0.8) 45%,
-          rgba(255, 255, 255, 0.55) 100%
+
+      .thin-line {
+        height: 2px;
+        opacity: 0.9;
+        background: linear-gradient(
+          90deg,
+          transparent 0%,
+          rgba(212, 175, 55, 0.9) 20%,
+          rgba(244, 228, 186, 1) 50%,
+          rgba(212, 175, 55, 0.9) 80%,
+          transparent 100%
         );
-        z-index: 1;
+      }
+
+      .tracking-wide {
+        letter-spacing: 0.35em;
+      }
+
+      .tracking-wider {
+        letter-spacing: 0.45em;
       }
     </style>
   </head>
 
   <body
-    class="h-screen m-0 p-0 overflow-hidden bg-[linear-gradient(135deg,#FFF5F7_0%,#FFE8EC_50%,#FFF5F7_100%)]"
+    class="min-h-screen flex items-stretch justify-center p-4"
+    style="background: url(./filee.jpg) center / cover no-repeat"
   >
-    <div class="w-full h-screen flex items-center justify-center p-2">
+    <div class="relative w-full max-w-[420px] overflow-hidden shadow-sm">
+      <div class="absolute inset-0"></div>
+
       <div
-        class="invite-card w-full min-h-screen rounded-[24px] shadow-[0_20px_60px_rgba(0,0,0,0.1)]"
+        class="absolute inset-0"
+        style="
+          background: radial-gradient(
+            ellipse at center,
+            rgba(255, 255, 255, 0.185) 0%,
+            rgba(250, 248, 245, 0.164) 65%,
+            rgba(250, 248, 245, 0.24) 100%
+          );
+        "
+      ></div>
+
+      <div
+        class="relative z-10 px-4 py-14 text-center flex flex-col items-center"
       >
+        <img src="./aynaz.webp" alt="" class="pt-10 ml-40 w-[30%]" />
+        <p class="font-nastaliq text-2xl leading-none text-gray-۹00">و</p>
+        <img src="./amir.webp" alt="" class="mr-40 w-[30%]" />
+
         <div
-          class="relative z-[2] h-full px-[14px] py-[10px] flex flex-col justify-evenly text-center"
+          class="serif-font text-[11px] w-full text-gray-500 mt-8 grid grid-cols-2 gap-y-2 text-center"
         >
-          <div>
-            <h1 class="gold-text font-serif text-5xl font-bold my-6">
-              جشن عقد
-            </h1>
-            <div class="mx-auto">
-              <img src="./font.webp" alt="" class="mx-auto" />
-            </div>
-            <div class="my-2 flex justify-center gap-6">
-              <p
-                class="font-nastaliq text-2xl leading-[1.7] text-[#6B4C6F] mt-6"
-              >
-                تو مرا جان و جهانی
-              </p>
-              <p
-                class="font-nastaliq text-2xl leading-[1.7] text-[#6B4C6F] mt-6"
-              >
-                چه کنم جان و جهان را
-              </p>
-            </div>
-            <div
-              class="mx-auto my-6 h-px w-[80%] opacity-40 bg-[linear-gradient(to_right,transparent,#a8a3a2,transparent)]"
-            ></div>
-            <p
-              class="font-serif w-[98%] mx-auto my-2 px-2 text-sm leading-[1.9] text-[#5A4A5C]"
-            >
-              با دل‌هایی سرشار از شادمانی، افتخار داریم که در جشن عقد خود میزبان
-              حضور گرم و صمیمانه‌ی شما عزیزان باشیم.
-            </p>
+          <div class="text-center">اشتیاقی که به دیدار تو دارد دل من</div>
+          <div class="text-center mt-2">
+            دل من داند و من دانم و دل داند و من
           </div>
 
-          <div
-            class="mx-auto my-2 w-[90%] rounded-[14px] border border-[rgba(212,175,55,0.25)] bg-[#FFF7F9] px-3 py-2.5"
+          <div class="text-center">خاک من گل شود و گل شکفد از گل من</div>
+          <div class="text-center mt-2">تا ابد مهر تو بیرون نرود از دل من</div>
+        </div>
+
+        <p class="text-[14px] serif-font tracking-wider text-gray-500 mt-4">
+          بهمن
+        </p>
+        <div class="w-full mt-6">
+          <div class="grid grid-cols-[1fr_auto_1fr] items-center gap-4">
+            <div class="flex flex-col items-center">
+              <div class="thin-line w-full mb-3 opacity-6"></div>
+              <p class="serif-font text-[14px] tracking-wide text-gray-500">
+                جمعه
+              </p>
+              <div class="thin-line w-full mt-3 opacity-6"></div>
+            </div>
+            <div>
+              <p class="gold-text text-[46px] leading-none">24</p>
+            </div>
+            <div class="flex flex-col items-center">
+              <div class="thin-line w-full mb-3 opacity-6"></div>
+              <p class="serif-font text-[14px] tracking-wide text-gray-500">
+                ساعت ۱۸:۰۰ الی ۲۳:۰۰
+              </p>
+              <div class="thin-line w-full mt-3 opacity-6"></div>
+            </div>
+          </div>
+          <p class="font-sans tracking-wider text-gray-500 mt-6">1404</p>
+          <p
+            class="serif-font text-[14px] tracking-wide text-gray-600 mt-2 leading-relaxed"
           >
-            <p class="text-base font-bold text-[#6B4C6F]">
-              روز جمعه ۲۴ بهمن ماه
-            </p>
-            <p class="mt-1 font-bold text-base text-[#8B6F8E]">
-              ساعت ۱۹:۰۰ الی ۲۳:۰۰
-            </p>
-            <div class="my-2 inline-block rounded-lg bg-white/70 px-3 py-1">
-              <p class="text-[14px] font-medium text-[#5A4A5C]">
-                میدان مینودر (غریب کش ) کیلومتر ۱۳ جاده الموت بعد از پیچ میانبر
-                (روبروی رستوران الی) باغ تالار هما
-              </p>
-            </div>
-          </div>
+            به صرف شام و شیرینی
+          </p>
+        </div>
 
-          <div>
-            <div
-              class="mx-auto mt-2 w-[90%] h-[180px] overflow-hidden rounded-[14px] border border-[rgba(212,175,55,0.25)] bg-white"
-              aria-label="نقشه مکان مراسم"
-            >
-              <iframe
-                class="block w-full h-full border-0"
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d260.6056886661724!2d50.14402829147587!3d36.305738259849335!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3f8ca90663353f5d%3A0x1e4db35f0907166d!2z2KjYp9i6INiq2KfZhNin2LEg2YfZhdin!5e0!3m2!1sen!2s!4v1767787453195!5m2!1sen!2s"
-                loading="lazy"
-                referrerpolicy="no-referrer-when-downgrade"
-                allowfullscreen
-                title="نقشه تالار"
-              ></iframe>
-            </div>
+        <div class="thin-line w-full my-2 opacity-30"></div>
+        <p
+          class="serif-font text-[14px] tracking-wide font-semibold text-gray-600 my-2 leading-relaxed"
+        >
+          با کمال افتخار، میزبان حضور گران‌قدر شما در آیین پیوند خود هستیم ❤️💍
+        </p>
+        <div class="thin-line w-full mb-2 opacity-30"></div>
+        <p
+          class="serif-font text-[12px] tracking-wide text-gray-600 mt-6 leading-relaxed"
+        >
+          ادرس: میدان مینودر (غریب کش ) کیلومتر ۱۳ جاده الموت بعد از پیچ میانبر
+          (بالاتر از رستوران الی) باغ تالار هما
+        </p>
+        <div class="flex justify-evenly items-center w-full mt-4">
+          <!-- Google Maps -->
+          <a
+            href="https://maps.app.goo.gl/RYyFXk5YKXVGk7tW7"
+            target="_blank"
+            rel="noopener"
+            class="p-2 rounded-xl hover:bg-[#FFF0F3] active:scale-95 transition"
+          >
+            <img src="./map.png" alt="Google Maps" class="w-12" />
+          </a>
 
-            <div class="flex flex-col items-center gap-2 mt-2">
-              <!-- <a
-                href="https://maps.app.goo.gl/RYyFXk5YKXVGk7tW7"
-                target="_blank"
-                rel="noopener"
-                class="inline-flex items-center gap-2 rounded-xl border border-[rgba(212,175,55,0.35)] bg-[#FFF0F3] px-4 py-2 active:scale-[0.98]"
-              >
-                <svg
-                  width="22"
-                  height="22"
-                  viewBox="0 0 24 24"
-                  fill="#D4AF37"
-                  aria-hidden="true"
-                >
-                  <path
-                    d="M12 2C8.13 2 5 5.13 5 9C5 14.25 12 22 12 22C12 22 19 14.25 19 9C19 5.13 15.87 2 12 2Z"
-                  />
-                  <circle cx="12" cy="9" r="2.5" fill="#FFF5F7"></circle>
-                </svg>
-                <span class="text-[12.5px] font-bold text-[#6B4C6F]">
-                  مشاهده موقعیت روی نقشه
-                </span>
-              </a> -->
-              <p class="text-[12.5px] text-black my-4">با آرزوی دیدار شما ❤️</p>
-            </div>
-          </div>
+          <!-- Neshan App -->
+          <a
+            href="https://nshn.ir/44_b1J0PeBNqXW"
+            target="_blank"
+            rel="noopener"
+            class="p-2 rounded-xl hover:bg-[#FFF0F3] active:scale-95 transition"
+          >
+            <img src="./neshan.png" alt="Neshan Map" class="w-12" />
+          </a>
         </div>
       </div>
     </div>
